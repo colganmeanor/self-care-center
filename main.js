@@ -49,10 +49,10 @@ function getRandomIndex(array) {
 }
 
 function testFunction(){
-  if (affirmationButton.checked === true) {
+  if (affirmationButton.checked) {
     console.log('Affirmation Button Checked?', affirmationButton.checked);
     resultBox.innerHTML = affirmations[getRandomIndex(affirmations)]
-  } else if (mantraButton.checked === true) {
+  } else if (mantraButton.checked) {
     console.log('Mantra button checked?', mantraButton.checked)
     resultBox.innerHTML = mantras[getRandomIndex(mantras)]
   }

@@ -69,13 +69,15 @@ img {
 }
 
 .affirmation-button {
-    font-style: italic;
     margin: auto;
     flex: auto;
 }
 
 .mantra-button {
-    font-style: italic;
     margin-left: 50%;
     flex: auto;
+}
+
+.button-text {
+  font-style: italic;
 }
