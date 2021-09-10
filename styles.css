@@ -54,13 +54,14 @@ h2 {
 .message-button {
     background-color: #134d71;
     color: white;
-    margin-top: 7%;
+    margin-top: 4%;
+    margin-right: 4%;
     padding: 1%;
     width: 25%;
     font-size: 95%;
     border-radius: 8px;
     font-weight: bold;
-    flex: auto;
+    /* flex: unset; */
 }
 
 img {
