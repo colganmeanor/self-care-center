@@ -21,13 +21,17 @@ body {
 h1 {
   color: #ffffff;
   padding: 2%;
-  border: solid white
 }
 
 h2 {
     color: #ffffff;
     padding-top: 40px;
-    border: solid white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .white-box {
@@ -35,8 +39,7 @@ h2 {
   border-radius: 20px;
   width: 43%;
   margin: auto;
-  padding: 2%;
-  border: solid black;
+  padding: 1%;
 }
 
 .result-box {
@@ -56,6 +59,8 @@ h2 {
     width: 25%;
     font-size: 95%;
     border-radius: 8px;
+    font-weight: bold;
+    flex: auto;
 }
 
 img {
@@ -64,12 +69,15 @@ img {
 }
 
 .affirmation-button {
-    margin-right: 70%;
-    font-style: italic;
+    margin: auto;
+    flex: auto;
 }
 
 .mantra-button {
     margin-left: 50%;
-    margin-top: -3%;
-    font-style: italic;
+    flex: auto;
+}
+
+.button-text {
+  font-style: italic;
 }
