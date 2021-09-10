@@ -27,8 +27,6 @@ var mantras = [
 
 
 // event listeners will go here:
-affirmationButton.addEventListener('input', test)
-mantraButton.addEventListener('input', mantraTest)
 recieveMessageButton.addEventListener('click', testFunction)
 
 
@@ -36,13 +34,6 @@ recieveMessageButton.addEventListener('click', testFunction)
 
 
 // functions will go here:
-function test (){
-  console.log('hi')
-}
-
-function mantraTest(){
-  console.log(affirmations[0])
-}
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -50,10 +41,8 @@ function getRandomIndex(array) {
 
 function testFunction(){
   if (affirmationButton.checked) {
-    console.log('Affirmation Button Checked?', affirmationButton.checked);
     resultBox.innerHTML = affirmations[getRandomIndex(affirmations)]
   } else if (mantraButton.checked) {
-    console.log('Mantra button checked?', mantraButton.checked)
     resultBox.innerHTML = mantras[getRandomIndex(mantras)]
   }
 }
