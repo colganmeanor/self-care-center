@@ -86,7 +86,9 @@ function viewAllMessages() {
 
 function returnHome(){
   listPage.classList.add('hidden');
-  mainPage.classList.remove('hidden')
+  mainPage.classList.remove('hidden');
+  mantraList.innerHTML = ``
+  affirmationList.innerHTML = ``
 }
 
 function showAffirmationList(){
