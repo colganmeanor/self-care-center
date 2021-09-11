@@ -4,7 +4,7 @@ var affirmationButton = document.querySelector('.affirmation-button')
 var mantraButton = document.querySelector('.mantra-button')
 var recieveMessageButton = document.querySelector('.message-button')
 var resultBox = document.querySelector('.result-box')
-
+var clearButton = document.querySelector('.clear-button')
 
 
 
@@ -45,7 +45,10 @@ var mantras = [
 
 
 // event listeners will go here:
-recieveMessageButton.addEventListener('click', testFunction)
+recieveMessageButton.addEventListener('click', receiveMessage)
+affirmationButton.addEventListener('click', enableButton)
+mantraButton.addEventListener('click', enableButton)
+clearButton.addEventListener('click', clearMessage)
 
 
 
@@ -57,10 +60,24 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function testFunction(){
+function receiveMessage(){
+  clearButton.classList.remove('hidden')
   if (affirmationButton.checked) {
     resultBox.innerHTML = affirmations[getRandomIndex(affirmations)]
   } else if (mantraButton.checked) {
     resultBox.innerHTML = mantras[getRandomIndex(mantras)]
   }
+}
+
+
+function enableButton(){
+  recieveMessageButton.disabled = false;
+}
+
+function clearMessage(){
+  resultBox.innerHTML = `<img src = "assets/meditate.svg">`;
+  clearButton.classList.add('hidden');
+  affirmationButton.checked = false;
+  mantraButton.checked = false;
+  recieveMessageButton.disabled = true;
 }

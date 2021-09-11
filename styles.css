@@ -55,13 +55,24 @@ h2 {
     background-color: #134d71;
     color: white;
     margin-top: 4%;
-    margin-right: 4%;
     padding: 1%;
     width: 25%;
     font-size: 95%;
     border-radius: 8px;
     font-weight: bold;
-    /* flex: unset; */
+    align-self: center;
+}
+
+.clear-button {
+    background-color: #134d71;
+    color: white;
+    margin-top: 4%;
+    padding: 1%;
+    width: 25%;
+    font-size: 95%;
+    border-radius: 8px;
+    font-weight: bold;
+    align-self: center;
 }
 
 img {
@@ -81,4 +92,8 @@ img {
 
 .button-text {
   font-style: italic;
+}
+
+.hidden {
+  display: none;
 }
