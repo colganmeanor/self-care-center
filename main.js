@@ -1,9 +1,15 @@
 //querySelectors will go here:
 
+var mainPage = document.querySelector('.main-page')
+var listPage = document.querySelector('.list-page')
 var affirmationButton = document.querySelector('.affirmation-button')
 var mantraButton = document.querySelector('.mantra-button')
 var recieveMessageButton = document.querySelector('.message-button')
 var resultBox = document.querySelector('.result-box')
+var viewAllButton = document.getElementById('view-all-button')
+var returnHomeButton = document.getElementById('return-home')
+var listBox = document.querySelector('.list-container')
+var messageChoiceBox = document.querySelector('.white-box')
 
 
 
@@ -45,7 +51,9 @@ var mantras = [
 
 
 // event listeners will go here:
-recieveMessageButton.addEventListener('click', testFunction)
+recieveMessageButton.addEventListener('click', recieveMessage)
+viewAllButton.addEventListener('click', viewAllMessages)
+returnHomeButton.addEventListener('click', returnHome)
 
 
 
@@ -57,10 +65,21 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function testFunction(){
+function recieveMessage(){
   if (affirmationButton.checked) {
     resultBox.innerHTML = affirmations[getRandomIndex(affirmations)]
   } else if (mantraButton.checked) {
     resultBox.innerHTML = mantras[getRandomIndex(mantras)]
   }
+  viewAllButton.classList.remove('hidden');
+}
+
+function viewAllMessages() {
+  listPage.classList.remove('hidden');
+  mainPage.classList.add('hidden');
+}
+
+function returnHome(){
+  listPage.classList.add('hidden');
+  mainPage.classList.remove('hidden')
 }

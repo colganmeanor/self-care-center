@@ -28,7 +28,12 @@ h2 {
     padding-top: 40px;
 }
 
-.container {
+img {
+    height: 10%;
+    width: 10%;
+}
+
+.main-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,9 +69,14 @@ h2 {
     /* flex: unset; */
 }
 
-img {
-    height: 10%;
-    width: 10%;
+.list-container{
+  background-color: white;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 5%;
+  width: 55%;
+  height: 100%;
+  padding: 15%;
 }
 
 .affirmation-button {
@@ -81,4 +91,12 @@ img {
 
 .button-text {
   font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+#return-home {
+  
 }
