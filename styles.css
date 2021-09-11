@@ -13,9 +13,11 @@ black - #000000; */
 
 body {
     background-image: linear-gradient(#184c71, #f7e4bf);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: auto;
     min-height: 100%;
-    height: 100vh
+    height: 100vh;
 }
 
 h1 {
