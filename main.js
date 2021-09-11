@@ -10,6 +10,9 @@ var viewAllButton = document.getElementById('view-all-button')
 var returnHomeButton = document.getElementById('return-home')
 var listBox = document.querySelector('.list-container')
 var messageChoiceBox = document.querySelector('.white-box')
+var affirmationsList = document.querySelector('.affirmation-list')
+var mantrasList = document.querySelector('.mantra-list')
+
 
 
 
@@ -77,9 +80,35 @@ function recieveMessage(){
 function viewAllMessages() {
   listPage.classList.remove('hidden');
   mainPage.classList.add('hidden');
+  showAffirmationList()
+  showMantraList()
 }
 
 function returnHome(){
   listPage.classList.add('hidden');
   mainPage.classList.remove('hidden')
+}
+
+function showAffirmationList(){
+  affirmationContainer = document.createElement('div');
+  affirmationList = document.createElement('ul');
+  affirmationsList.appendChild(affirmationContainer);
+  affirmationContainer.appendChild(affirmationList);
+  for (i = 0; i < affirmations.length; i++){
+    affirmationItem = document.createElement('li');
+    affirmationItem.innerHTML = affirmations[i];
+    affirmationList.appendChild(affirmationItem);
+  }
+}
+
+function showMantraList(){
+  mantraContainer = document.createElement('div');
+  mantraList = document.createElement('ul');
+  mantrasList.appendChild(mantraContainer);
+  mantraContainer.appendChild(mantraList);
+  for (i = 0; i < mantras.length; i++){
+    mantraItem = document.createElement('li');
+    mantraItem.innerHTML = mantras[i];
+    mantraList.appendChild(mantraItem);
+  }
 }

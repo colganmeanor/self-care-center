@@ -69,14 +69,20 @@ img {
     /* flex: unset; */
 }
 
-.list-container{
-  background-color: white;
-  border-radius: 20px;
-  margin: auto;
-  margin-top: 5%;
-  width: 55%;
-  height: 100%;
-  padding: 15%;
+.list-container {
+    background-color: white;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 5%;
+    width: 55%;
+    height: 100%;
+    padding: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .affirmation-button {
@@ -89,6 +95,14 @@ img {
     flex: auto;
 }
 
+.affirmation-list {
+
+}
+
+.mantra-list {
+
+}
+
 .button-text {
   font-style: italic;
 }
@@ -98,5 +112,5 @@ img {
 }
 
 #return-home {
-  
+
 }
