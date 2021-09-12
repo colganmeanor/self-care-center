@@ -65,8 +65,7 @@ function getRandomIndex(array) {
 }
 
 function receiveMessage() {
-  clearButton.classList.remove('hidden')
-  removeMessageButton.classList.remove('hidden')
+  showButtons();
   currentAffirmation = affirmations[getRandomIndex(affirmations)];
   currentMantra = mantras[getRandomIndex(mantras)];
   if (affirmationButton.checked) {
@@ -81,40 +80,47 @@ function enableButton() {
   recieveMessageButton.disabled = false;
 }
 
-function clearMessage() {
-  resultBox.innerHTML = `<img src = "assets/meditate.svg">`;
+function hideButtons() {
   clearButton.classList.add('hidden');
-  removeMessageButton.classList.add('hidden')
+  removeMessageButton.classList.add('hidden');
   affirmationButton.checked = false;
   mantraButton.checked = false;
   recieveMessageButton.disabled = true;
 }
 
-function removeMessage(){
-  if (resultBox.innerHTML === currentAffirmation) {
-    removeAffirmation();
-  } else if (resultBox.innerHTML === currentMantra){
-    removeMantra()
-  }
-  resultBox.innerHTML =
-  `<img src = "assets/meditate.svg">
-  <div>Yo, we got rid of that message for you.</div>`;
+function showButtons() {
+  clearButton.classList.remove('hidden');
+  removeMessageButton.classList.remove('hidden');
 }
 
-function removeAffirmation(){
-  console.log(affirmations)
-  for (var i = 0; i < affirmations.length; i++){
+function clearMessage() {
+  resultBox.innerHTML = `<img src = "assets/meditate.svg">`;
+  hideButtons()
+}
+
+function removeMessage() {
+  if (resultBox.innerHTML === currentAffirmation) {
+    removeAffirmation();
+  } else if (resultBox.innerHTML === currentMantra) {
+    removeMantra();
+  }
+  resultBox.innerHTML = `<img src = "assets/meditate.svg">
+  <div class>Yo, we got rid of that message for you. No worries, we didn't like it that much anyway.</div>`;
+  hideButtons()
+}
+
+function removeAffirmation() {
+  for (var i = 0; i < affirmations.length; i++) {
     if (affirmations[i] === currentAffirmation) {
       affirmations.splice(i, 1);
     }
-  } console.log(affirmations)
+  }
 }
 
 function removeMantra() {
-  console.log(mantras)
   for (var i = 0; i < mantras.length; i++) {
     if (mantras[i] === currentMantra) {
       mantras.splice(i, 1);
     }
-  } console.log(mantras)
+  }
 }

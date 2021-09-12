@@ -67,8 +67,8 @@ h2 {
     background-color: #134d71;
     color: white;
     margin-top: 4%;
-    padding: 1%;
-    width: 25%;
+    padding: 9px;
+    width: 18%;
     font-size: 95%;
     border-radius: 8px;
     font-weight: bold;
@@ -96,4 +96,8 @@ img {
 
 .hidden {
   display: none;
+}
+
+#remove-message-button {
+    margin-left: 7%;
 }
