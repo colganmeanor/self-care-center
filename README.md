@@ -16,13 +16,22 @@ This project is designed to provide the user with a randomly selected affirmatio
 
 Once the user has chosen between **affirmation** or **mantra**, they can press the **Receive Message** button to receive their randomly selected **affirmation** or **mantra**. The user is not able to click **Receive Message** until they have chosen either **affirmation** or **mantra** above.
 
+![Self-Care Center Basic](https://user-images.githubusercontent.com/87510749/133004525-1ed4646d-7a89-472c-94b8-551b30b523f4.gif)
+
+
 The generated message will take the place of the yoga person image in the box below. The user can continue to click **Receive Message** and they will continue to receive random messages from the section of their choice.
 
 When messages begin appearing in place of the yoga person icon, the user will see two more buttons appear below. The button on the left, **Clear Message**, will clear out the currently shown message on the screen, and replace the message with the original yoga person icon.
 
+![Self-Care Center - Clear Message](https://user-images.githubusercontent.com/87510749/133004571-d713664b-e1cb-4c2b-afbe-95c2a756ac70.gif)
+
+
 The button on the right, **I'm not feeling this one...**, will do a little bit more than just clearing the message. It will remove the currently shown message from it's respective section (**affirmations**, or **mantras**), and prevent it from being shown again.
 
 When **I'm not feeling this one...** is clicked, the yoga person icon will re-appear in the box above, with an additional message that lets the user know that the message has been removed. In subsequent presses of the **Receive Message** button, the user will no longer see the message that has been removed.
+
+![Self-Care Center - Delete Message Feature](https://user-images.githubusercontent.com/87510749/133004615-afe441a3-fe7d-45c5-9ed4-cc51338876fa.gif)
+
 
 ## Technologies
   - Javascript
