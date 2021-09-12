@@ -105,7 +105,7 @@ function removeMessage() {
     removeMantra();
   }
   resultBox.innerHTML = `<img src = "assets/meditate.svg">
-  <div class>Yo, we got rid of that message for you. No worries, we didn't like it that much anyway.</div>`;
+  <div>Yo, we got rid of that message for you. No worries, go ahead and choose another if you want. 😌 </div>`;
   hideButtons()
 }
 

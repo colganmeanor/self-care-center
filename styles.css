@@ -6,6 +6,7 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000; */
 
+/* Element Rules */
 * {
   text-align: center;
   font-family: 'Quicksand', sans-serif;
@@ -27,6 +28,13 @@ h2 {
     color: #ffffff;
     padding-top: 40px;
 }
+
+img {
+    height: 10%;
+    width: 10%;
+}
+
+/* Class Rules */
 
 .container {
   display: flex;
@@ -75,10 +83,6 @@ h2 {
     align-self: center;
 }
 
-img {
-    height: 10%;
-    width: 10%;
-}
 
 .affirmation-button {
     margin: auto;
@@ -98,6 +102,8 @@ img {
   display: none;
 }
 
+
+/* ID Rules */
 #remove-message-button {
     margin-left: 7%;
 }
