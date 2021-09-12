@@ -5,11 +5,12 @@ var mantraButton = document.querySelector('.mantra-button')
 var recieveMessageButton = document.querySelector('.message-button')
 var resultBox = document.querySelector('.result-box')
 var clearButton = document.querySelector('.clear-button')
+var removeMessageButton = document.querySelector('#remove-message-button')
 
 
 
 //global variables will go here:
-var affirmations =[
+var affirmations = [
   'I forgive myself and set myself free.',
   'I believe I can be all that I want to be.',
   'I am in the process of becoming the best version of myself.',
@@ -43,13 +44,16 @@ var mantras = [
   'I am the sky, the rest is weather.'
 ]
 
+var currentAffirmation;
+var currentMantra;
+
 
 // event listeners will go here:
 recieveMessageButton.addEventListener('click', receiveMessage)
 affirmationButton.addEventListener('click', enableButton)
 mantraButton.addEventListener('click', enableButton)
 clearButton.addEventListener('click', clearMessage)
-
+removeMessageButton.addEventListener('click', removeMessage)
 
 
 
@@ -60,24 +64,57 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
-function receiveMessage(){
+function receiveMessage() {
   clearButton.classList.remove('hidden')
+  removeMessageButton.classList.remove('hidden')
+  currentAffirmation = affirmations[getRandomIndex(affirmations)];
+  currentMantra = mantras[getRandomIndex(mantras)];
   if (affirmationButton.checked) {
-    resultBox.innerHTML = affirmations[getRandomIndex(affirmations)]
+    resultBox.innerHTML = currentAffirmation;
   } else if (mantraButton.checked) {
-    resultBox.innerHTML = mantras[getRandomIndex(mantras)]
+    resultBox.innerHTML = currentMantra;
   }
 }
 
 
-function enableButton(){
+function enableButton() {
   recieveMessageButton.disabled = false;
 }
 
-function clearMessage(){
+function clearMessage() {
   resultBox.innerHTML = `<img src = "assets/meditate.svg">`;
   clearButton.classList.add('hidden');
+  removeMessageButton.classList.add('hidden')
   affirmationButton.checked = false;
   mantraButton.checked = false;
   recieveMessageButton.disabled = true;
+}
+
+function removeMessage(){
+  if (resultBox.innerHTML === currentAffirmation) {
+    removeAffirmation();
+  } else if (resultBox.innerHTML === currentMantra){
+    removeMantra()
+  }
+  resultBox.innerHTML =
+  `<img src = "assets/meditate.svg">
+  <div>Yo, we got rid of that message for you.</div>`;
+}
+
+function removeAffirmation(){
+  console.log(affirmations)
+  for (var i = 0; i < affirmations.length; i++){
+    if (affirmations[i] === currentAffirmation) {
+      affirmations.splice(i, 1);
+    }
+  } console.log(affirmations)
+}
+
+function removeMantra() {
+  console.log(mantras)
+  for (var i = 0; i < mantras.length; i++) {
+    if (mantras[i] === currentMantra) {
+      mantras.splice(i, 1);
+    }
+  } console.log(mantras)
 }
